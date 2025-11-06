@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+}
+body{
+    background-color: var(--Stone-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+}
+/* UTILITY STYLE */
+#recipe .redipe-content .preparation-time ul,
+#recipe .redipe-content .ingredients ul{
+    margin-left: 25px;
+}
+h2{
+    color: var(--Brown-800);
+    margin: 15px 0;
+}
+hr{
+    height: 1px; 
+    background-color: var(--Stone-150); 
+    border: none; 
+    margin: 10px 0;
+}
+#recipe{
+    width: 50vw;
+    background-color: var(--White);   
+    margin: 100px 0;
+    padding: 20px;
+    border-radius: 15px;   
+}
+
+#recipe img{
+    width: 100%;
+    border-radius: 5px;
+}
+h1,h2{
+    font-family: "Young Serif", serif;
+    font-weight: 300;
+}
+
+#recipe .redipe-content h1{
+    margin: 1rem 0;
+    color: var(--Stone-900);
+}
+#recipe .redipe-content p{
+    margin-bottom: 1rem;
+    color: var(--Stone-600);
+    font-size: 16px;
+}
+#recipe .redipe-content .preparation-time{
+    background-color: var(--Rose-50);
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+/* PREPARATION TIME START*/
+.redipe-content .preparation-time h3{
+    color: var(--Rose-800);
+}
+
+.redipe-content .preparation-time ul li{
+    color: var(--Stone-600);
+    
+}
+.redipe-content .preparation-time ul li::marker {
+  color: var(--Rose-800); 
+}
+/* PREPARATION TIME END*/
+
+/* INGREDIENTS START */
+.redipe-content .ingredients ul,
+.redipe-content .instructions ol{
+    margin-left: 25px;
+    line-height: 1.8;
+    list-style-position: outside; /* Keeps numbers outside the text */
+  padding-left: 25px; /* Adds space between numbers and text */
+     
+    color: var(--Stone-600);
+}
+.redipe-content .ingredients ul li::marker,
+.redipe-content .instructions ol li::marker {
+  color: var(--Brown-800); 
+  font-weight: bold;
+  
+  
+}
+.redipe-content .ingredients h2{
+    margin: 1rem 0;
+}
+/* INGREDIENTS END */
+
+/* NUTRITION START*/
+.redipe-content .nutrition table{
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--Stone-600);
+    height: 150px;
+   
+}
+.redipe-content .nutrition table span{
+    color: var(--Brown-800);
+    font-weight: 700;
+}
+.redipe-content .nutrition table tr:not(:last-child) {
+  border-bottom: 1px solid var(--Stone-150);
+}
+/* NUTRITION END */
+
+@media (max-width:900px) {
+    #recipe{
+      width: 60vw;  
+    }
+
+}
+@media (max-width:700px) {
+    #recipe{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #recipe img{
+        border-radius: 0;
+    }
+    #recipe .redipe-content{
+        padding: 20px;
+    }
+}
+
